@@ -1,5 +1,8 @@
 # NTS Radio
 
+![nts-radio-1](https://user-images.githubusercontent.com/13831998/236661309-eb8f1b52-0e2f-4962-b4f1-c8a3b2e69825.png)
+
+
 _Music is your only friend, until the end_
 
 Search and access [NTS Radio](https://www.nts.live) shows, episodes, and live streams directly from Raycast! This is an unofficial (fan) implementation based on the (undocumented) public NTS Radio API.
@@ -28,3 +31,13 @@ Live stations and mixtapes are audio streams hosted by NTS and can be accessed b
 - Why can’t I just use my favourites list from my NTS account?
 
 This extension is an unofficial implementation and thus cannot access any NTS user account information. If your favourites list is not too long, it should be relatively quick to add it manually using Raycast.
+
+## Screenshots
+
+![nts-radio-2](https://user-images.githubusercontent.com/13831998/236661328-8acbb585-58a9-4418-bc2e-0c832e407129.png)
+
+![nts-radio-3](https://user-images.githubusercontent.com/13831998/236661330-64632fa0-e2aa-4ab4-8925-4720ac41c518.png)
+
+![nts-radio-4](https://user-images.githubusercontent.com/13831998/236661337-d06cefeb-9b06-47bf-9fb2-ee7fac2e4199.png)
+
+![nts-radio-5](https://user-images.githubusercontent.com/13831998/236661341-3da24e94-b5da-4bd6-a7ae-a931e892ded7.png)
