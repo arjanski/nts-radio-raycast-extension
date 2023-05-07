@@ -4,6 +4,7 @@ import { API_URL, WEB_URL } from "../constants/constants";
 import { Episode, EpisodeGenre } from "../types";
 import Tracklist from "./Tracklist";
 import { useEffect, useState } from "react";
+import { getDate } from "../utils/getDate";
 
 type Props = {
   path: string;
@@ -72,12 +73,6 @@ const Details = ({ path }: Props) => {
     } catch (error) {
       console.error("Error removing from favourites:", error);
     }
-  };
-
-  const getDate = (date: Date | undefined): string => {
-    if (!date) return "";
-    const dateObj = new Date(date);
-    return dateObj.toLocaleDateString();
   };
 
   return (

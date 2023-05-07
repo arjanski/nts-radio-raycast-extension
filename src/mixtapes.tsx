@@ -1,4 +1,4 @@
-import { Action, ActionPanel, Grid, Icon, Image } from "@raycast/api";
+import { Action, ActionPanel, Grid, Icon, Image, Toast, showToast } from "@raycast/api";
 import { getFavicon, useFetch } from "@raycast/utils";
 import { API_PATH, API_URL, WEB_URL } from "./constants/constants";
 import { Mixtapes, MixtapesResult } from "./types";
@@ -38,11 +38,23 @@ export default function Command() {
       onAction: async (audioStreamEndpoint?: string) => {
         try {
           if (audioStreamEndpoint) {
+            await showToast({
+              style: Toast.Style.Animated,
+              title: "Opening mixtape audio stream",
+            });
             await play(audioStreamEndpoint);
           } else {
+            await showToast({
+              style: Toast.Style.Failure,
+              title: "Sorry! Could not open audio stream",
+            });
             console.log("Error: audio stream endpoint not provided, aborting");
           }
         } catch (err) {
+          await showToast({
+            style: Toast.Style.Failure,
+            title: "Sorry! Could not stop audio stream",
+          });
           const error = getErrorMessage(err);
           console.log("Error playing song/episode", error);
         }

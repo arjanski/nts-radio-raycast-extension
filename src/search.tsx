@@ -4,6 +4,7 @@ import { useState } from "react";
 import { API_PATH, API_URL, WEB_URL } from "./constants/constants";
 import { Nts } from "./types";
 import Details from "./components/Details";
+import Show from "./components/Show";
 
 const types = [
   {
@@ -57,6 +58,9 @@ export default function Command() {
             <ActionPanel title={result.title}>
               {result.article_type === "episode" && result.article?.path && (
                 <Action.Push title="Open" target={<Details path={result.article.path} />} />
+              )}
+              {result.article_type === "show" && result.article?.path && (
+                <Action.Push title="Open" target={<Show path={result.article.path} />} />
               )}
               {result.article?.path && (
                 <Action.OpenInBrowser
